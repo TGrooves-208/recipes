@@ -16,6 +16,7 @@
 		1BF12C4E1C86962300CDBCF3 /* Recipe+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF12C4C1C86962300CDBCF3 /* Recipe+CoreDataProperties.swift */; };
 		1BF12C4F1C86962300CDBCF3 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF12C4D1C86962300CDBCF3 /* Recipe.swift */; };
 		1BF12C511C869B9A00CDBCF3 /* RecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF12C501C869B9A00CDBCF3 /* RecipeCell.swift */; };
+		1BF12C531C876A7600CDBCF3 /* CreateRecipeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF12C521C876A7600CDBCF3 /* CreateRecipeVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		1BF12C4C1C86962300CDBCF3 /* Recipe+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Recipe+CoreDataProperties.swift"; path = "../Recipe+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		1BF12C4D1C86962300CDBCF3 /* Recipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Recipe.swift; path = ../Recipe.swift; sourceTree = "<group>"; };
 		1BF12C501C869B9A00CDBCF3 /* RecipeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeCell.swift; sourceTree = "<group>"; };
+		1BF12C521C876A7600CDBCF3 /* CreateRecipeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateRecipeVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				1BF12C361C862FBB00CDBCF3 /* ViewController.swift */,
+				1BF12C521C876A7600CDBCF3 /* CreateRecipeVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -175,6 +178,7 @@
 				1BF12C4E1C86962300CDBCF3 /* Recipe+CoreDataProperties.swift in Sources */,
 				1BF12C371C862FBB00CDBCF3 /* ViewController.swift in Sources */,
 				1BF12C511C869B9A00CDBCF3 /* RecipeCell.swift in Sources */,
+				1BF12C531C876A7600CDBCF3 /* CreateRecipeVC.swift in Sources */,
 				1BF12C351C862FBB00CDBCF3 /* AppDelegate.swift in Sources */,
 				1BF12C4F1C86962300CDBCF3 /* Recipe.swift in Sources */,
 			);
@@ -326,6 +330,7 @@
 				1BF12C481C862FBB00CDBCF3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

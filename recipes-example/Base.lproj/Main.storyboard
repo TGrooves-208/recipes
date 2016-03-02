@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="115" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aTn-bc-vdh">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="115" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aTn-bc-vdh">
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -26,10 +26,10 @@
                                         <rect key="frame" x="0.0" y="92" width="600" height="115"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5Ux-Vz-xi3" id="scO-xs-wlo">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="114.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="115"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DwL-Ad-ZKz">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DwL-Ad-ZKz">
                                                     <rect key="frame" x="0.0" y="0.0" width="600" height="114.5"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mums Happy Hamburger" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y8B-QH-VP6">
@@ -93,10 +93,10 @@
             </objects>
             <point key="canvasLocation" x="1002" y="-353"/>
         </scene>
-        <!--View Controller-->
+        <!--Create RecipeVC-->
         <scene sceneID="STH-8y-eA4">
             <objects>
-                <viewController id="QsC-L5-q98" sceneMemberID="viewController">
+                <viewController id="QsC-L5-q98" customClass="CreateRecipeVC" customModule="recipes_example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="UDo-R3-frU"/>
                         <viewControllerLayoutGuide type="bottom" id="BZ5-gI-xcY"/>
@@ -120,7 +120,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QkV-v5-L1r">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="food" translatesAutoresizingMaskIntoConstraints="NO" id="QkV-v5-L1r">
                                 <rect key="frame" x="213" y="255" width="175" height="175"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="175" id="b9q-w8-zo8"/>
@@ -132,6 +132,9 @@
                                 <state key="normal" title="ADD IMAGE">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="addImage:" destination="QsC-L5-q98" eventType="touchUpInside" id="bm0-No-1dv"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lUh-wt-kSk">
                                 <rect key="frame" x="249" y="465" width="103" height="30"/>
@@ -140,6 +143,9 @@
                                     <constraint firstAttribute="width" constant="103" id="utl-Io-WKG"/>
                                 </constraints>
                                 <state key="normal" title="Create Recipe"/>
+                                <connections>
+                                    <action selector="createRecipe:" destination="QsC-L5-q98" eventType="touchUpInside" id="mxq-6j-6SC"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -163,6 +169,12 @@
                             <constraint firstItem="A9w-MD-Nzk" firstAttribute="trailing" secondItem="kFA-JK-Yhj" secondAttribute="trailingMargin" id="zUe-df-D7K"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="recipeImg" destination="QkV-v5-L1r" id="bdh-NZ-gPK"/>
+                        <outlet property="recipeIngredients" destination="c9m-UG-UnM" id="fOP-Xi-hmN"/>
+                        <outlet property="recipeSteps" destination="ZUs-f6-fkt" id="4Zj-cB-jcq"/>
+                        <outlet property="recipeTitle" destination="A9w-MD-Nzk" id="p6T-FG-6jr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cc0-8I-yCe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -188,4 +200,7 @@
             <point key="canvasLocation" x="287" y="-353"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="food" width="1200" height="692"/>
+    </resources>
 </document>
